@@ -28,8 +28,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Mediante el string en values
                 contador++;
+                if((contador%2)==0){
+                    elTexto.setText("Es divisible entre 2");
+
+                }else{
                 elTexto.setText(R.string.titulo);
-                elTexto.setText(elTexto.getText().toString()+contador);
+                elTexto.setText(elTexto.getText().toString()+contador);}
                 //Texto directo
                 //elTexto.setText("!!Soy el titulo!!! Contador:"+contador);
             }
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,
                         textoDeEntrada.getText(),
                         Toast.LENGTH_SHORT).show();
+                texto2.setText(textoDeEntrada.getText());
                 }
         });
 
